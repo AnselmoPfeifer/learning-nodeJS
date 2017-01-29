@@ -2,11 +2,7 @@
  * Created by anselmo on 28/01/17.
  */
 
-var msg = require('./modulos/test');
-var express = require('express');
-var app = express();
-
-app.set('view engine', 'ejs');
+var app = require('./config/server');
 
 app.get('/tecnologia', function (req, res) {
     res.render('sessao/tecnologia');
@@ -26,5 +22,4 @@ app.get('/', function (req, res) {
 
 app.listen(3000, function () {
     console.log('Server com express!')
-    console.log(msg())
 })
