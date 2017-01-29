@@ -3,11 +3,15 @@
  */
 var mysql = require('mysql');
 
-module.exports = function () {
+var conMysql = function() {
+    console.log('Conectado com o banco!')
     return mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: '123',
         database: 'curso_nodejs'
     });
+}
+module.exports = function() {
+    return conMysql;
 };
