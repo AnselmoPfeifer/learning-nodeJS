@@ -5,3 +5,4 @@
 - npm install mysql --save
 - npm install consign --save
 - npm install body-parser --save
+- npm install express-validator --save
