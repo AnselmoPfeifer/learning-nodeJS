@@ -2,10 +2,6 @@
  * Created by anselmo on 28/01/17.
  */
 
-/**
- * Created by anselmo on 28/01/17.
- */
-
 var http = require('http');
 
 var server = http.createServer(function (req, res) {

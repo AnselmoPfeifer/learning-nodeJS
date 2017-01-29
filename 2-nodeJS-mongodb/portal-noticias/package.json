@@ -1,0 +1,15 @@
+{
+  "name": "portal-noticias",
+  "version": "1.0.0",
+  "description": "POrtal de noticias usando nodeJS",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anselmo Pfeifer",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.1"
+  }
+}
