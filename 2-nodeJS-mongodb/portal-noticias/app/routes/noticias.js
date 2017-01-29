@@ -8,16 +8,12 @@
 //     });
 // }
 
-module.exports = function (app) {
-    app.get('/noticias', function (req, res) {
-        var mysql = require('mysql');
-        var conection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '123',
-            database: 'curso_nodejs'
-        });
+var dbConnection = require('../../config/conectionDb');
 
+module.exports = function (app) {
+    var conection = dbConnection();
+
+    app.get('/noticias', function (req, res) {
         conection.query('select * from noticias', function (error, result){
             // retorna um json
             //res.send(result);
