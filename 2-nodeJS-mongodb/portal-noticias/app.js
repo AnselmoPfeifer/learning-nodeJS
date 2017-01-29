@@ -7,36 +7,20 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
-app.get('/', function (req, res) {
-    res.send('' +
-        '<html>' +
-            '<head><title>Porta de Noticias</title></head>' +
-            '<body><h1>Porta de Noticias</h1></body>' +
-        '</html>');
-});
-
 app.get('/tecnologia', function (req, res) {
-    res.send(
-        '<html>' +
-            '<head><title>Categoria Tecnologia</title></head>' +
-            '<body><h1>Categoria Tecnologia</h1></body>' +
-        '</html>');
+    res.render('sessao/tecnologia');
 });
 
-app.get('/moda', function (req, res) {
-    res.send(
-        '<html>' +
-        '<head><title>Categoria Moda</title></head>' +
-        '<body><h1>Categoria Moda</h1></body>' +
-        '</html>');
+app.get('/formulario_inclusao_noticias', function (req, res) {
+    res.render('admin/form_add_noticia');
 });
 
-app.get('/beleza', function (req, res) {
-    res.send(
-        '<html>' +
-        '<head><title>Categoria Beleza</title></head>' +
-        '<body><h1>Categoria Beleza</h1></body>' +
-        '</html>');
+app.get('/noticias', function (req, res) {
+    res.render('noticias/noticias');
+});
+
+app.get('/', function (req, res) {
+    res.render('home/index');
 });
 
 app.listen(3000, function () {
