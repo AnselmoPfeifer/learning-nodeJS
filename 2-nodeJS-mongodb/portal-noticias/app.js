@@ -11,6 +11,11 @@ var rotaFormularioNoticias = require('./app/routes/formulario_inclusao_noticias'
 
 var rotaTecnologia = require('./app/routes/tecnologia')(app)
 
-app.listen(3000, function () {
+app.listen(3000, function() {
     console.log('Server com express!')
+    if app == 1 {
+        console.console.log();
+    }
 })
+
+// TODO fazer mais
