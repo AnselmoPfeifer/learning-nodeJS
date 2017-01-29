@@ -1,24 +1,19 @@
 /**
  * Created by anselmo on 28/01/17.
  */
-
 var app = require('./config/server');
 
-app.get('/tecnologia', function (req, res) {
-    res.render('sessao/tecnologia');
-});
+var rotaNoticias = require('./app/routes/noticias');
+rotaNoticias(app);
 
-app.get('/formulario_inclusao_noticias', function (req, res) {
-    res.render('admin/form_add_noticia');
-});
+var rotaHome = require('./app/routes/home');
+rotaHome(app);
 
-app.get('/noticias', function (req, res) {
-    res.render('noticias/noticias');
-});
+var rotaFormularioNoticias = require('./app/routes/formulario_inclusao_noticias');
+rotaFormularioNoticias(app);
 
-app.get('/', function (req, res) {
-    res.render('home/index');
-});
+var rotaTecnologia = require('./app/routes/tecnologia');
+rotaTecnologia(app)
 
 app.listen(3000, function () {
     console.log('Server com express!')
