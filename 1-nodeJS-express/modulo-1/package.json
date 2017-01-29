@@ -1,0 +1,15 @@
+{
+  "name": "loja-livros",
+  "version": "1.0.0",
+  "description": "Site da loja de livros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anselmo Pfeifer <anspfeifer@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0"
+  }
+}
