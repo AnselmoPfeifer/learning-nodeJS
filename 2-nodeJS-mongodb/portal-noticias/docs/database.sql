@@ -6,3 +6,9 @@ create table noticias(
 	);
 
 insert into noticias (titulo, noticia) values ('Titulo da primeira noticia','Texto da primeira noticia');
+
+alter TABLE noticias add column resumo varchar(100);
+
+alter TABLE noticias add column autor varchar(30);
+
+alter TABLE noticias add column data_noticia date;
