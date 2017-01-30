@@ -7,7 +7,6 @@ module.exports = function (aplication) {
     });
 
     aplication.post('/noticia/salvar', function (request, response) {
-        aplication.app.contr
         aplication.app.controllers.admin.salvar_noticia(aplication, request, response);
     });
 }

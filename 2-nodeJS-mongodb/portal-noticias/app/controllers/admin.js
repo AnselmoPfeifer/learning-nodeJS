@@ -22,7 +22,7 @@ module.exports.salvar_noticia = function (aplication, request, response) {
         return;
     }
 
-    var connection = aplication.config.conectionDb();
+    var connection = aplication.config.connectionDb();
     var noticiasModel = new aplication.app.models.NoticiasDAO(connection);
 
     noticiasModel.salvarNoticia(noticia, function(error, result) {
