@@ -16,6 +16,7 @@ app.use(expressValidadtor());
 consign()
     .include('app/routes')
     .then('config/conectionDb.js') // Necessario add a extensao do arquivo.
+    .then('app/controllers')
     .then('app/models')
     .into(app)
 module.exports = app;
