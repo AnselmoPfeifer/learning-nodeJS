@@ -5,15 +5,38 @@
             Basic way for Java Script
         </title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAjfohLdBlnFQ4nFto7Ov9Q1JW0SNRrKSQ",
+            authDomain: "nodejs-basic-cc8ce.firebaseapp.com",
+            databaseURL: "https://nodejs-basic-cc8ce.firebaseio.com",
+            projectId: "nodejs-basic-cc8ce",
+            storageBucket: "",
+            messagingSenderId: "451366028936",
+            appId: "1:451366028936:web:589960599a57ccf517c13d"
+            };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+        
+    <script>
+        function signInWithGoogle() {
+            var googleAuthProvider = new firebase.auth.GoogleAuthProvider
+            firebase.auth().signInWithPopup(googleAuthProvider)
+                    .then(function(data) {
+                        console.log(data)
+                    })
+                    .catch(function(error) {
+                        console.log(error)
+                    })
+        }
+    </script>
     </head>
     
     <body class="container">
-        <h1>Yell your breakfast</h1>
-        <p>Live your Life</p>
+        <p>Logging with Firebase Auth</p>
 
-        <form method="POST">
-            <p>Enter your breakfast: <input name="breakfast"/></p>
-            <button type="submit">Submit</button>
-        </form>
+        <button onclick="{signInWithGoogle()}">Google</button>
     </body>
 </html>
